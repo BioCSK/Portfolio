@@ -1,3 +1,9 @@
+.mainWrapper {
+  margin-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .on {
   -webkit-transition: 1s;
   transition: 1s;
@@ -60,9 +66,6 @@
 
 #aboutMe-profile {
   margin-top: 100px;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 100px;
 }
 
 #aboutMe-profile .profile {
@@ -76,10 +79,25 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
 }
 
 #aboutMe-profile .profile #myProfilePic {
   margin-right: 20px;
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+#aboutMe-profile .profile #myName {
+  margin-top: 8px;
+}
+
+#education {
+  margin-top: 60px;
+}
+
+#education #educationTimeline {
+  width: 900px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,9 @@
 
-
+.mainWrapper{
+    margin-top: 100px;
+    width: 80%;
+    margin:0 auto;
+}
 .on{
     transition: 1s;
     background-color:black;
@@ -54,18 +58,28 @@
   
 }
 #aboutMe-profile{
-    margin-top: 100px;
-    width: 80%;
-    margin:0 auto;
+
     margin-top: 100px;
     .profile {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: top;
         #myProfilePic{
             margin-right: 20px;
-            opacity: 0.9;
-
+            opacity: 0.8;
         }
+        #myName{
+            margin-top: 8px;
+        }
+
+    }
+}
+
+#education{
+    margin-top: 60px;
+
+    #educationTimeline{
+        width: 900px;
     }
 }
