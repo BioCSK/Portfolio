@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/gsap/gsap.min.js" ></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/js/index.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/reset.css">
+
+</head>
+
+<body>
+    <div id="root">
+        <div class="aboutMe">
+            <div class="topNavi">
+                <ul class="topNavi-component">
+                    <li><a><span>About Me</span></a></li>
+                    <li><a>My Projects</a></li>
+                    <li><a>Contact Me</a></li>
+                </ul>
+            </div>
+            <h1 class="aboutMeTxt">안녕하세요 백엔드 개발자 김찬수입니다. </h1>
+
+        </div>
+
+        <main class="mainWrapper">
+            <div id="aboutMe-profile">
+                <div class="profile">
+                    <div>
+                        <img id="myProfilePic" src="../img/myPortfolioImg.jpg" alt="profileImg">
+                        <h2 id="myName"> 김 찬 수 </h2>
+                    </div>
+                    <h4>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, sint. Enim exercitationem cum
+                        qui nostrum, facere veniam molestiae labore corrupti hic perferendis modi repellendus ducimus
+                        eveniet, quo sunt magnam atque?
+                    </h4>
+                </div>
+            </div>
+
+            <div class="resume">
+                <div id="education">
+                    <div>
+                        <h3 class="educationTxt">Education</h3>
+                        <ul class="degrees">
+                            <li>2015.03~2019.08 <b>BS in Biology,Gachon University</b></li>
+                            <li>2019.08~2020.6 <b>Integrated PhD in Medical Science , Seoul National University College
+                                    of Medicine</b></li>
+                            <li>2021.03 ~ current <b>MS in Software engineering , Sogang University</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="career">
+                    <div>
+                        <div>
+                            <h3 class="careerTxt">Career</h3>
+                            <ul class="career">
+                                <li>2020.08~ current <b>Data engineer in Data Science Team of Asan Preclinical
+                                        Evaluation center for cancer therapeutix </b></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="skills">
+                <h3 class="skillTxt">Skills</h3>
+                <div id="skillList">
+                    <ul class="skills">
+                        <li id="java">
+                            <h4 class="java">Java</h4>
+                            <div class="maximumBox">
+                                <div class="myProficiency" data-num="80">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li id="Javascript">
+                            <h4 class="Javascript">Javascript</h4>
+                            <div class="maximumBox">
+                                <div class="myProficiency" data-num="55">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="Python">
+                            <h4 class="Python">Python</h4>
+                            <div class="maximumBox">
+                                <div class="myProficiency" data-num="40">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="R">
+                            <h4 class="R">R</h4>
+                            <div class="maximumBox">
+                                <div class="myProficiency" data-num="90">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="SQL">
+                            <h4 class="SQL">SQL</h4>
+                            <div class="maximumBox">
+                                <div class="myProficiency" data-num="40">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="framework">
+                        <li id="Spring">
+                            <h4 class="Spring">Spring</h4>
+                            <div class="maximumBox">
+                                <div class="myProficiency" data-num="70">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="Nodejs">
+                            <h4 class="Nodejs">Node.js</h4>
+                            <div class="maximumBox">
+                                <div class="myProficiency" data-num="20">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div>
+                        <h3></h3>
+                        <ul id="etcSkill">
+                            <li>Git</li>
+                            <li>IntelliJ</li>
+                            <li>VS code</li>
+                            <li>SCSS</li>
+                            <li>R MarkDown (RMD)</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div id="project">
+                
+            </div>
+
+
+    </main>
+
+    </div>
+
+</body>
+
+</html>
