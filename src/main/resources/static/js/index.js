@@ -78,12 +78,26 @@ for (let i = 0 ; i < frameworkSkills.children.length ; i++){
 
 
 
-let requestPath= "/api/project"
+let requestPath= "/project"
 window.addEventListener("scroll",(e)=>{
  
     if(this.scrollY>1300){
-        this.location.href="project.html";
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET',requestPath);
+        xhr.send(null);
+        // xhr.setRequestHeader('Content-Type',"application/json");
+        // xhr.send(data);
+        // xhr.addEventListener("load",function(){
+        //     console.log(xhr);
+        //     let result =  JSON.parse(xhr.responseText);
+        //     if(result.result == "ok" ){
+        //         document.querySelector(".result").innerHTML = JSON.parse(xhr.responseText);
+        //     }else{
+        //         return "ok";
+        //     }
+        // })
     }
+  
 })
 
 
