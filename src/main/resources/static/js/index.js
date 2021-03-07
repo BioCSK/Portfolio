@@ -101,3 +101,8 @@ window.addEventListener("scroll",(e)=>{
 })
 
 
+
+const swiper = new Swiper('.swiper-container', {
+    speed: 400,
+    spaceBetween: 100,
+  });
