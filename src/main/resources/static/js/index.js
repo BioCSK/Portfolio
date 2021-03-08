@@ -33,6 +33,18 @@ mainEvent.from(".aboutMeTxt span",{
 
 
 
+function removeOnClassExcept(target,exceptClassName){
+    topNav.children[target].classList.add("on");
+    elements = Array.from(topNav.children);
+    elements.map((dt)=>{
+        if(dt.classList.contains(exceptClassName)) {
+        }
+        else{
+            dt.classList.remove("on");
+        } 
+    });
+}
+
 window.addEventListener("scroll",(e)=>{
     
     console.log(this.scrollY);
@@ -40,6 +52,10 @@ window.addEventListener("scroll",(e)=>{
         topNav.children[0].classList.add("on");
     }else if(this.scrollY < 400 || this.scrollY >600){
         topNav.children[0].classList.remove("on");
+    }
+    
+    if(this.scrollY >= 1400){
+        removeOnClassExcept(1,"myProjects")
     }
 
 });
@@ -100,9 +116,13 @@ window.addEventListener("scroll",(e)=>{
   
 })
 
+swiperOption = {
+    speed:1000,
+    loop:true,  
+    autoplay:{
+        delay:5000,
+        disableOnInteraction:false
+    }
+}
 
-
-const swiper = new Swiper('.swiper-container', {
-    speed: 400,
-    spaceBetween: 100,
-  });
+const swiper = new Swiper('.swiper-container', swiperOption);
