@@ -49,13 +49,13 @@ window.addEventListener("scroll",(e)=>{
     
     console.log(this.scrollY);
     if(this.scrollY >= 450){
-        topNav.children[0].classList.add("on");
-    }else if(this.scrollY < 400 || this.scrollY >600){
-        topNav.children[0].classList.remove("on");
+        removeOnClassExcept(0,"aboutMe_")
     }
-    
     if(this.scrollY >= 1400){
         removeOnClassExcept(1,"myProjects")
+    }
+    if(this.scrollY >= 2000){
+        removeOnClassExcept(2,"contactMe")
     }
 
 });
@@ -79,6 +79,9 @@ function fillSkillPercentage(skillName){
             }
         }
         else if(this.scrollY<600){
+            myProficiency.style.width="0px";
+        }
+        if(this.scrollY>=1600){
             myProficiency.style.width="0px";
         }
     })

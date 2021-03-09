@@ -33,7 +33,7 @@
         width: 100%;
         height: 50px;
         position:fixed;
-        z-index: 99999;
+        z-index: 999;
 
         .topNavi-component{
             position: absolute;
@@ -347,8 +347,9 @@
 
 #project{
     margin-top: 100px;
-
+    
     .list{
+
         .project1{
             background-image: url("../img/dna1.jpg");
             width: 100%;
@@ -368,3 +369,43 @@
     }
 }
 
+
+#contact{
+    margin-top: 100px;
+    position: relative;
+
+    .contactForm{
+        position: absolute;
+        top:0;
+        left: 10%;
+        width: 50%;
+        display: flex;
+        flex-direction:column;
+
+        :not(:nth-child(1)){
+            margin-top:10px;
+        }
+
+        .name,.email{
+            width: 50%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .message{
+            width: 100%;
+            resize: none;
+        }
+
+        .submit{
+            background-color: rgb(246, 244, 241);
+            width: 10%;
+            padding:20px 10px;
+            border:none;
+            &:hover{
+                transition: 0.3s;
+                background-color: rgb(219, 221, 230);
+            }
+        }
+    }
+}
