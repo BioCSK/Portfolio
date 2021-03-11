@@ -48,6 +48,9 @@ function removeOnClassExcept(target,exceptClassName){
 window.addEventListener("scroll",(e)=>{
     
     console.log(this.scrollY);
+    if(this.scrollY < 450){
+        topNav.children[0].classList.remove("on");
+    }
     if(this.scrollY >= 450){
         removeOnClassExcept(0,"aboutMe_")
     }

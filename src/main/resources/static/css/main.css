@@ -461,14 +461,19 @@
 
 #contact {
   margin-top: 100px;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #contact .contactForm {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 50%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,6 +481,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#contact .contactForm form:first-child {
+  position: relative;
+}
+
+#contact .contactForm form:first-child input {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#contact .contactForm form:first-child i {
+  position: absolute;
 }
 
 #contact .contactForm :not(:nth-child(1)) {
@@ -504,5 +523,13 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #dbdde6;
+}
+
+#contact .workingDevImg {
+  border-radius: 50%;
+}
+
+#contact .workingDevImg:hover {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=main.css.map */
