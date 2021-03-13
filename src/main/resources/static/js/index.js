@@ -14,16 +14,31 @@ educationLink.addEventListener("click",(e) =>{
     root.classList.add("educationLinkOn");
     additionalEducation.style.display="block";
     document.body.style.overflow="hidden";
-    gsap.from(".additionalEducation",{
+ gsap.fromTo(".additionalEducation",
+    {
         opacity:0,
-        x:-100,
-        duration:0.6
+        x:-100
+    },{
+        opacity:1,
+        x:100,
+        duration:0.3
     })
 })
 closeBtn.addEventListener("click",function(){
-    additionalEducation.style.display="none";
-    root.classList.remove("educationLinkOn");
-    document.body.style.overflow="visible";
+    gsap.fromTo(".additionalEducation",
+    {
+        opacity:1,
+        x:100
+    },{
+        opacity:0,
+        x:-100,
+        duration:0.3
+    })
+    .eventCallback("onComplete",function(){
+        additionalEducation.style.display="none";
+        root.classList.remove("educationLinkOn");
+        document.body.style.overflow="visible";
+    })
 })
 myProfileImg.addEventListener("mouseenter",function(){
     myProfileImg.style.opacity = "1";
