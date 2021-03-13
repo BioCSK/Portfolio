@@ -3,6 +3,17 @@ const topNav = document.querySelector(".topNavi-component");
 const myProfileImg = document.getElementById("myProfilePic");
 const skills = document.querySelector(".skills");
 const frameworkSkills = document.querySelector(".framework");
+const educationLink = document.getElementById("referenceLink");
+const root = document.getElementById("root");
+const  additionalEducation = document.querySelector(".additionalEducation");
+
+educationLink.addEventListener("click",(e) =>{
+
+    e.preventDefault();
+    root.classList.add("educationLinkOn");
+    additionalEducation.style.display="block";
+    document.body.style.overflow="hidden";
+})
 myProfileImg.addEventListener("mouseenter",function(){
     myProfileImg.style.opacity = "1";
 })
@@ -132,3 +143,5 @@ swiperOption = {
 }
 
 const swiper = new Swiper('.swiper-container', swiperOption);
+
+

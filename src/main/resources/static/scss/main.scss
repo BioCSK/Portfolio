@@ -1,3 +1,24 @@
+.additionalEducation{
+
+    opacity: 1 ; 
+    background:rgb(17, 16, 16);
+    color: #fff;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    z-index: 9999;
+    transform: translate(-50%,-50%);
+    
+    
+
+}
+
+.educationLinkOn{
+    opacity: 0.1;
+
+    // scrollbar hidden  처리하고자함 
+    scrollbar-width: none;
+}
 
 .mainWrapper{
     background-color: white;
@@ -96,7 +117,10 @@
      
         .degrees li{
             font-size: 17px;
-            margin-bottom: 10px;   
+            margin-bottom: 10px; 
+            #referenceLink,a{
+                color: rgb(103, 117, 241);
+            }  
         }
     }
 
@@ -169,6 +193,31 @@
                 .myProficiency{
                     transition: 0.7s;
                     background-color: rgb(222, 231, 97);
+                    width: 0px;
+                    height: 100%;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        top:50%;
+                        left:50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+        }
+        #Keras{
+            margin-top: 40px;
+            display: flex;
+            .Keras{
+                margin-right: 10px;
+            }
+            .maximumBox{
+                width: 700px;
+                height: 30px;
+                background-color: whitesmoke;
+                .myProficiency{
+                    transition: 0.7s;
+                    background-color:  rgb(79, 170, 223);
                     width: 0px;
                     height: 100%;
                     position: relative;
@@ -320,6 +369,7 @@
                 
             }
         }
+
     
         li{
             font-size: 17px;
@@ -383,17 +433,20 @@
         flex-direction:column;
 
         form{
-            &:first-child{
-                position: relative;
+            div{
 
-                input{
+                position: relative;
+                i{
+
                     position: absolute;
-                    left:0;
-                    top:0;
+                    top:10%;
+                    left:1%;
+                    display: block;
+                 
                 }
 
-                i{
-                    position: absolute;
+                input{
+                    text-align: center;
                 }
             }
             

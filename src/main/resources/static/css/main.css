@@ -1,3 +1,20 @@
+.additionalEducation {
+  opacity: 1;
+  background: #111010;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.educationLinkOn {
+  opacity: 0.1;
+  scrollbar-width: none;
+}
+
 .mainWrapper {
   background-color: white;
   z-index: 0;
@@ -122,6 +139,10 @@
   margin-bottom: 10px;
 }
 
+.resume #education .degrees li #referenceLink, .resume #education .degrees li a {
+  color: #6775f1;
+}
+
 .resume #career .careerTxt {
   margin-bottom: 20px;
   text-decoration: underline;
@@ -225,6 +246,40 @@
 }
 
 #skills #skillList .framework #Nodejs .maximumBox .myProficiency span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#skills #skillList .framework #Keras {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#skills #skillList .framework #Keras .Keras {
+  margin-right: 10px;
+}
+
+#skills #skillList .framework #Keras .maximumBox {
+  width: 700px;
+  height: 30px;
+  background-color: whitesmoke;
+}
+
+#skills #skillList .framework #Keras .maximumBox .myProficiency {
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  background-color: #4faadf;
+  width: 0px;
+  height: 100%;
+  position: relative;
+}
+
+#skills #skillList .framework #Keras .maximumBox .myProficiency span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -483,18 +538,19 @@
           flex-direction: column;
 }
 
-#contact .contactForm form:first-child {
+#contact .contactForm form div {
   position: relative;
 }
 
-#contact .contactForm form:first-child input {
+#contact .contactForm form div i {
   position: absolute;
-  left: 0;
-  top: 0;
+  top: 10%;
+  left: 1%;
+  display: block;
 }
 
-#contact .contactForm form:first-child i {
-  position: absolute;
+#contact .contactForm form div input {
+  text-align: center;
 }
 
 #contact .contactForm :not(:nth-child(1)) {
