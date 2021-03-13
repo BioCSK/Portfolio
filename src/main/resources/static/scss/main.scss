@@ -8,9 +8,61 @@
     left:50%;
     z-index: 9999;
     transform: translate(-50%,-50%);
-    
-    
 
+    width: 110vh;
+    height: 45vh;
+
+    .resumeTbl{
+        width: 100%;
+        .tblCol{
+            text-align: center;
+        }
+
+        .tblRow{
+            text-align: center;
+            vertical-align: middle;
+
+        }
+    }
+    
+    .cetifications{
+        display: flex;
+        li{
+            list-style: circle ;
+
+            margin-left:30px;            
+
+        }
+    }
+    .addtionalEducationSubContent{
+        margin-top: 15px;
+    }
+
+    .addtionalEducationTitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 3px;
+    
+        .addtionalEducationSubTitle{
+            margin-top:20px;
+            margin-left: 20px;
+            background-color: rgb(253, 253, 253);
+            width: 20%;
+            text-align: center;
+            color: black;
+        }
+        #closeBtn{
+            background-color: transparent;
+            position: absolute;
+            top:0;
+            right:0;
+
+            color: #fff;
+            border: none;
+        }
+
+    }
 }
 
 .educationLinkOn{

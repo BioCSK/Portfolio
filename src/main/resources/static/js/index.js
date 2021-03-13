@@ -6,13 +6,24 @@ const frameworkSkills = document.querySelector(".framework");
 const educationLink = document.getElementById("referenceLink");
 const root = document.getElementById("root");
 const  additionalEducation = document.querySelector(".additionalEducation");
+const closeBtn = document.getElementById("closeBtn");
+
 
 educationLink.addEventListener("click",(e) =>{
-
     e.preventDefault();
     root.classList.add("educationLinkOn");
     additionalEducation.style.display="block";
     document.body.style.overflow="hidden";
+    gsap.from(".additionalEducation",{
+        opacity:0,
+        x:-100,
+        duration:0.6
+    })
+})
+closeBtn.addEventListener("click",function(){
+    additionalEducation.style.display="none";
+    root.classList.remove("educationLinkOn");
+    document.body.style.overflow="visible";
 })
 myProfileImg.addEventListener("mouseenter",function(){
     myProfileImg.style.opacity = "1";
@@ -32,9 +43,7 @@ for (let i = 0; i < mainTxt.innerHTML.length ; i ++){
 }
 
 mainTxt.innerHTML = mainTxtsep;
-
 let mainEvent = gsap.timeline();
-
 mainEvent.from(".aboutMeTxt span",{
     duration:1,
     opacity:0,
@@ -59,10 +68,10 @@ function removeOnClassExcept(target,exceptClassName){
 window.addEventListener("scroll",(e)=>{
     
     console.log(this.scrollY);
-    if(this.scrollY < 450){
+    if(this.scrollY < 280){
         topNav.children[0].classList.remove("on");
     }
-    if(this.scrollY >= 450){
+    if(this.scrollY >= 280){
         removeOnClassExcept(0,"aboutMe_")
     }
     if(this.scrollY >= 1400){

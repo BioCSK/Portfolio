@@ -8,6 +8,68 @@
   z-index: 9999;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 110vh;
+  height: 45vh;
+}
+
+.additionalEducation .resumeTbl {
+  width: 100%;
+}
+
+.additionalEducation .resumeTbl .tblCol {
+  text-align: center;
+}
+
+.additionalEducation .resumeTbl .tblRow {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.additionalEducation .cetifications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.additionalEducation .cetifications li {
+  list-style: circle;
+  margin-left: 30px;
+}
+
+.additionalEducation .addtionalEducationSubContent {
+  margin-top: 15px;
+}
+
+.additionalEducation .addtionalEducationTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3px;
+}
+
+.additionalEducation .addtionalEducationTitle .addtionalEducationSubTitle {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #fdfdfd;
+  width: 20%;
+  text-align: center;
+  color: black;
+}
+
+.additionalEducation .addtionalEducationTitle #closeBtn {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  border: none;
 }
 
 .educationLinkOn {
