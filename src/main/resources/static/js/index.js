@@ -7,6 +7,7 @@ const educationLink = document.getElementById("referenceLink");
 const root = document.getElementById("root");
 const  additionalEducation = document.querySelector(".additionalEducation");
 const closeBtn = document.getElementById("closeBtn");
+const swiperPositionRound = document.getElementsByClassName("round");
 
 
 educationLink.addEventListener("click",(e) =>{
@@ -82,7 +83,7 @@ function removeOnClassExcept(target,exceptClassName){
 
 window.addEventListener("scroll",(e)=>{
     
-    console.log(this.scrollY);
+   
     if(this.scrollY < 280){
         topNav.children[0].classList.remove("on");
     }
@@ -135,37 +136,26 @@ for (let i = 0 ; i < frameworkSkills.children.length ; i++){
 
 
 
-let requestPath= "/project"
-window.addEventListener("scroll",(e)=>{
- 
-    if(this.scrollY>1300){
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET',requestPath);
-        xhr.send(null);
-        // xhr.setRequestHeader('Content-Type',"application/json");
-        // xhr.send(data);
-        // xhr.addEventListener("load",function(){
-        //     console.log(xhr);
-        //     let result =  JSON.parse(xhr.responseText);
-        //     if(result.result == "ok" ){
-        //         document.querySelector(".result").innerHTML = JSON.parse(xhr.responseText);
-        //     }else{
-        //         return "ok";
-        //     }
-        // })
-    }
-  
-})
 
 swiperOption = {
     speed:1000,
     loop:true,  
-    autoplay:{
-        delay:5000,
-        disableOnInteraction:false
-    }
+    // autoplay:{
+    //     delay:0,
+    //     disableOnInteraction:false
+    // }
 }
 
 const swiper = new Swiper('.swiper-container', swiperOption);
+swiperPositionRound[swiper.activeIndex-1].classList.add("currentSwipePosition");
+swiper.on("slideChange",function(){
+    swiperPositionRound[swiper.activeIndex-1].classList.add("currentSwipePosition");
+    restOfArray = Array.from(swiperPositionRound);
+    restOfArray = restOfArray.filter((value,index)=> index !==swiper.activeIndex-1);
+    console.log(restOfArray);
+    for(let i = 0 ; i<restOfArray.length ; i++){
+        restOfArray[i].classList.remove("currentSwipePosition");
+    }
+})
 
 

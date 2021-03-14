@@ -1,3 +1,42 @@
+.swiper-button-location {
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  position: relative;
+}
+
+.swiper-button-location .swiper-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.swiper-button-location .swiper-location li {
+  margin-right: 7px;
+}
+
+.swiper-button-location .swiper-location li .round {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.swiper-button-location .swiper-location li .currentSwipePosition {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+  border: 1px solid black;
+}
+
 .additionalEducation {
   opacity: 1;
   background: #111010;
@@ -558,10 +597,64 @@
   margin-top: 100px;
 }
 
-#project .list .project1 {
-  background-image: url("../img/dna1.jpg");
+#project .list .project1, #project .list .project2, #project .list .project3 {
+  background-image: url("../img/tenor-google.gif");
   width: 100%;
   height: 75vh;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 75% 100%;
+  position: relative;
+}
+
+#project .list .project1 .ribbon1, #project .list .project1 .ribbon2, #project .list .project1 .ribbon3, #project .list .project2 .ribbon1, #project .list .project2 .ribbon2, #project .list .project2 .ribbon3, #project .list .project3 .ribbon1, #project .list .project3 .ribbon2, #project .list .project3 .ribbon3 {
+  padding: 10px 120px;
+  position: absolute;
+  right: -5%;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#project .list .project1 .ribbon1, #project .list .project2 .ribbon1, #project .list .project3 .ribbon1 {
+  background-color: aqua;
+}
+
+#project .list .project1 .ribbon2, #project .list .project2 .ribbon2, #project .list .project3 .ribbon2 {
+  background-color: #ffbeff;
+}
+
+#project .list .project1 .ribbon3, #project .list .project2 .ribbon3, #project .list .project3 .ribbon3 {
+  background-color: aquamarine;
+}
+
+#project .list .project1 .detailTechniqueInfo, #project .list .project2 .detailTechniqueInfo, #project .list .project3 .detailTechniqueInfo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 200px;
+}
+
+#project .list .project1 .detailTechniqueInfo .InfoValue li, #project .list .project1 .detailTechniqueInfo .InfoKey li, #project .list .project2 .detailTechniqueInfo .InfoValue li, #project .list .project2 .detailTechniqueInfo .InfoKey li, #project .list .project3 .detailTechniqueInfo .InfoValue li, #project .list .project3 .detailTechniqueInfo .InfoKey li {
+  margin-top: 10px;
+}
+
+#project .list .project1 .detailTechniqueInfo .InfoValue .techniqueList, #project .list .project2 .detailTechniqueInfo .InfoValue .techniqueList, #project .list .project3 .detailTechniqueInfo .InfoValue .techniqueList {
+  text-align: left;
+}
+
+#project .list .project1 .detailTechniqueInfo .InfoValue .techniqueList li, #project .list .project2 .detailTechniqueInfo .InfoValue .techniqueList li, #project .list .project3 .detailTechniqueInfo .InfoValue .techniqueList li {
+  list-style: circle;
 }
 
 #project .list .project2 {
@@ -576,8 +669,31 @@
   height: 75vh;
 }
 
-#contact {
+#activity {
   margin-top: 100px;
+}
+
+#activity .activity {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contactWrapper {
+  background-color: black;
+  margin-top: 200px;
+}
+
+.contactWrapper #contact {
+  width: 60%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -589,7 +705,7 @@
           align-items: center;
 }
 
-#contact .contactForm {
+.contactWrapper #contact .contactForm {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -600,54 +716,54 @@
           flex-direction: column;
 }
 
-#contact .contactForm form div {
+.contactWrapper #contact .contactForm form div {
   position: relative;
 }
 
-#contact .contactForm form div i {
+.contactWrapper #contact .contactForm form div i {
   position: absolute;
   top: 10%;
   left: 1%;
   display: block;
 }
 
-#contact .contactForm form div input {
+.contactWrapper #contact .contactForm form div input {
   text-align: center;
 }
 
-#contact .contactForm :not(:nth-child(1)) {
+.contactWrapper #contact .contactForm :not(:nth-child(1)) {
   margin-top: 10px;
 }
 
-#contact .contactForm .name, #contact .contactForm .email {
+.contactWrapper #contact .contactForm .name, .contactWrapper #contact .contactForm .email {
   width: 50%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-#contact .contactForm .message {
+.contactWrapper #contact .contactForm .message {
   width: 100%;
   resize: none;
 }
 
-#contact .contactForm .submit {
+.contactWrapper #contact .contactForm .submit {
   background-color: #f6f4f1;
   width: 10%;
   padding: 20px 10px;
   border: none;
 }
 
-#contact .contactForm .submit:hover {
+.contactWrapper #contact .contactForm .submit:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #dbdde6;
 }
 
-#contact .workingDevImg {
+.contactWrapper #contact .workingDevImg {
   border-radius: 50%;
 }
 
-#contact .workingDevImg:hover {
+.contactWrapper #contact .workingDevImg:hover {
   opacity: 0.5;
 }
 /*# sourceMappingURL=main.css.map */

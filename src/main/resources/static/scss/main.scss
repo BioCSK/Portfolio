@@ -1,3 +1,38 @@
+
+.swiper-button-location{
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    position: relative;
+    .swiper-location{
+        display: flex;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+
+        li{
+            margin-right: 7px;
+            .round{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: 1px solid black;
+            
+            }
+            .currentSwipePosition{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: black;
+                border: 1px solid black;   
+            }
+        }
+
+    }
+}
 .additionalEducation{
 
     opacity: 1 ; 
@@ -452,10 +487,59 @@
     
     .list{
 
-        .project1{
-            background-image: url("../img/dna1.jpg");
+        .project1,.project2,.project3{
+            background-image: url("../img/tenor-google.gif");
             width: 100%;
             height: 75vh;
+            background-repeat: no-repeat;
+            background-position:0 100%;
+            background-size:75% 100%;
+            position: relative;
+
+            .ribbon1,.ribbon2,.ribbon3{
+                padding: 10px 120px;
+                position: absolute;
+                right: -5%;
+                top:0;
+                transform: rotate(45deg);
+                box-shadow: 0 5px 10px rgba(0,0,0,.5);
+                text-align: center;
+                
+            }
+            .ribbon1{
+                background-color: aqua;
+            }
+            .ribbon2{
+                background-color: rgb(255, 190, 255);
+            }
+            .ribbon3{
+                background-color: aquamarine;
+            }
+
+
+            .detailTechniqueInfo{
+                position: absolute;
+                right:0;
+                top:0;
+                width: 25%;
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+                margin-top: 200px;
+                .InfoValue,.InfoKey{
+                    li{
+                        margin-top: 10px;
+                    }
+                }
+                .InfoValue{
+                    .techniqueList{
+                        text-align: left;
+                       li{
+                           list-style: circle;
+                       }
+                    }
+                }
+            }
         }
         .project2{
             background-image: url("../img/java.png");
@@ -471,70 +555,89 @@
     }
 }
 
-
-#contact{
+#activity{
     margin-top: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 
-    .contactForm{
-
-        width: 60%;
+    .activity{
+        margin-top: 50px;
         display: flex;
-        flex-direction:column;
-
-        form{
-            div{
-
-                position: relative;
-                i{
-
-                    position: absolute;
-                    top:10%;
-                    left:1%;
-                    display: block;
-                 
-                }
-
-                input{
-                    text-align: center;
-                }
-            }
-            
-        }
-
-        :not(:nth-child(1)){
-            margin-top:10px;
-        }
-
-        .name,.email{
-            width: 50%;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        .message{
-            width: 100%;
-            resize: none;
-        }
-
-        .submit{
-            background-color: rgb(246, 244, 241);
-            width: 10%;
-            padding:20px 10px;
-            border:none;
-            &:hover{
-                transition: 0.3s;
-                background-color: rgb(219, 221, 230);
-            }
-        }
-    }
-
-    .workingDevImg{ 
-        border-radius: 50%;
-     &:hover{
-         opacity: 0.5;
-     }
+        flex-direction:row;
+        justify-content: space-around;
     }
 }
+
+
+.contactWrapper{
+    background-color: black;
+    margin-top: 200px;
+    #contact{
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        .contactForm{
+    
+            width: 60%;
+            display: flex;
+            flex-direction:column;
+    
+            form{
+                div{
+    
+                    position: relative;
+                    i{
+    
+                        position: absolute;
+                        top:10%;
+                        left:1%;
+                        display: block;
+                     
+                    }
+    
+                    input{
+                        text-align: center;
+                    }
+                }
+                
+            }
+    
+            :not(:nth-child(1)){
+                margin-top:10px;
+            }
+    
+            .name,.email{
+                width: 50%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+    
+            .message{
+                width: 100%;
+                resize: none;
+            }
+    
+            .submit{
+                background-color: rgb(246, 244, 241);
+                width: 10%;
+                padding:20px 10px;
+                border:none;
+                &:hover{
+                    transition: 0.3s;
+                    background-color: rgb(219, 221, 230);
+                }
+            }
+        }
+    
+        .workingDevImg{ 
+            border-radius: 50%;
+         &:hover{
+             opacity: 0.5;
+         }
+        }
+    }
+    
+}
+
+
