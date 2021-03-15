@@ -178,10 +178,15 @@
         align-items: top;
         #myProfilePic{
             margin-right: 20px;
+            width: 200px;
+            height: 200px;
             opacity: 0.8;
+            display: inline-block;
+            border-radius: 50%;
         }
         #myName{
             margin-top: 8px;
+            text-align: center;
         }
 
     }

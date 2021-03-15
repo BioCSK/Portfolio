@@ -207,11 +207,16 @@
 
 #aboutMe-profile .profile #myProfilePic {
   margin-right: 20px;
+  width: 200px;
+  height: 200px;
   opacity: 0.8;
+  display: inline-block;
+  border-radius: 50%;
 }
 
 #aboutMe-profile .profile #myName {
   margin-top: 8px;
+  text-align: center;
 }
 
 .resume {

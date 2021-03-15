@@ -123,12 +123,9 @@
     </div>
 
     <div id="root">
-
         <div class="aboutMe">
             <h1 class="aboutMeTxt">안녕하세요 주니어 백엔드 개발자 김찬수입니다. </h1>
-
             <div class="topNavi">
-
                 <ul class="topNavi-component">
                     <li class="aboutMe_"><a><span>About Me</span></a></li>
                     <li class="myProjects"><a><span>My Projects</span></a></li>
@@ -138,19 +135,16 @@
             </div>
         </div>
 
-
-
         <main class="mainWrapper">
             <div id="aboutMe-profile">
                 <div class="profile">
                     <div>
-                        <img id="myProfilePic" src="../img/myPortfolioImg.jpg" alt="profileImg">
+                        <img id="myProfilePic" src="../static/img/증명사진.tiff" alt="profileImg">
                         <h2 id="myName"> 김 찬 수 </h2>
                     </div>
                     <h4>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, sint. Enim exercitationem cum
-                        qui nostrum, facere veniam molestiae labore corrupti hic perferendis modi repellendus ducimus
-                        eveniet, quo sunt magnam atque?
+                        안녕하세요 ? 주니어 백엔드 개발자를 목표로 공부하고 있는 데이터 엔지니어입니다. 
+                        <p>서울대학교 의과대학 석박통합 학위과정중에 생물정보학 분야를 공부하며  입문하게 되었습니다. </p>
                     </h4>
                 </div>
             </div>
@@ -351,9 +345,9 @@
                                 <li></li>
                             </ul>
                             <ul class="InfoValue">
-                                <li>Toy Project</li>
+                                <li>Drug Target Text Mining (NLP)</li>
                                 <li>2021.04</li>
-                                <li>NodeJS를 활용한 게시판 구축</li>
+                                <li>REST API 활용한 신약후보물질 Text Mining</li>
                                 <li>
                                     <h4>Backend</h4>
                                     <ul class="techniqueList">
@@ -366,6 +360,12 @@
                                     <h4>Frontend</h4>
                                     <ul class="techniqueList">
                                         <li> Vanilla javascript </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Machine Learning</h4>
+                                    <ul class="techniqueList">
+                                        <li> R - keras, ggplot2 , dplyr</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -423,15 +423,15 @@
                     <h2>Contact Me</h2>
                     <form action="#" method="POST">
                         <div>
-                            <input class="name" type="text" placeholder="이름"><i class="fa fa-user"
+                            <input name= "requestorName" class="name" type="text" placeholder="이름"><i class="fa fa-user"
                                 aria-hidden="true"></i>
                         </div>
                         <div>
-                            <input class="email" type="email" placeholder="helloworld@email.com"><i
+                            <input name="requestorEmail" class="email" type="email" placeholder="helloworld@email.com"><i
                                 class="fa fa-address-book-o" aria-hidden="true"></i>
                         </div>
                         <div>
-                            <textarea class="message" name="message" cols="30" rows="10"
+                            <textarea name="content" class="message" name="message" cols="30" rows="10"
                                 placeholder="any message would be appreciate"></textarea>
                         </div>
                         <input class="submit" type="submit" value="submit">
