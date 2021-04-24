@@ -8,7 +8,11 @@ const root = document.getElementById("root");
 const  additionalEducation = document.querySelector(".additionalEducation");
 const closeBtn = document.getElementById("closeBtn");
 const swiperPositionRound = document.getElementsByClassName("round");
+const topBtn = document.querySelector(".movingBtn .top");
 
+topBtn.addEventListener("click",()=>{
+    this.scrollY = 0;
+})
 
 educationLink.addEventListener("click",(e) =>{
     e.preventDefault();
@@ -83,7 +87,6 @@ function removeOnClassExcept(target,exceptClassName){
 
 window.addEventListener("scroll",(e)=>{
     
-   
     if(this.scrollY < 280){
         topNav.children[0].classList.remove("on");
     }
@@ -140,10 +143,6 @@ for (let i = 0 ; i < frameworkSkills.children.length ; i++){
 swiperOption = {
     speed:1000,
     loop:true,  
-    // autoplay:{
-    //     delay:0,
-    //     disableOnInteraction:false
-    // }
 }
 
 const swiper = new Swiper('.swiper-container', swiperOption);
