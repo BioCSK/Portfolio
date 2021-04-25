@@ -24,6 +24,8 @@
 
 .movingBtn .gitHub:hover {
   background-color: black;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .movingBtn .gitHub:hover a {
@@ -47,6 +49,8 @@
 
 .movingBtn .top:hover {
   background-color: black;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .movingBtn .top:hover a {
